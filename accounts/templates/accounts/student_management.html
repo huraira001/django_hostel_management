@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+
+ {% include 'accounts/navbar.html' %}
+
+
+<html>
+    <tittle>Hostels Management</title> <dr><dr>
+
+<body>
+<div class="container">
+    List of Hostels
+    <br><br>
+
+    {% block content %}
+    <div class="container">
+        <ul>
+        {% for hostel in hostel_list%}
+        <li>{{ hostel}} with student capacity {{hostel.student_capacity}} and comprising of {{hostel.no_of_rooms}} rooms.</li> 
+        {% endfor %}
+        </ul>        
+    {% endblock %}
+    </div>    
+
+</body>
+
+    
+
+
